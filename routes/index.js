@@ -75,7 +75,7 @@ router.post("/login", (req, res) => {
     user.validatePassword(password).then((isValidate) => {
       if (!isValidate) {
         res.send(401);
-      } else {
+      } else { 
         //const payload = [user.email, user.name, user.lastname];
         const payload = {
           email: user.email,
@@ -83,8 +83,8 @@ router.post("/login", (req, res) => {
           lastname: user.lastname,
         };
         const token = generateToken(payload);
-        res.cookie("token", token);
-        res.status(200).send({ user_id: user.id, ...payload });
+        //res.cookie("token", token);
+        res.status(200).send({user:{ user_id: user.id, ...payload }, token:token});
       }
     });
   });
@@ -111,7 +111,8 @@ router.get("/me", validateAuth, (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  res.clearCookie("token").sendStatus(204);
+  res.clearCookie('token')
+  return res.sendStatus(200);
 });
 
 router.get("/allusers", (req, res) => {

@@ -1,7 +1,8 @@
 const { validateToken } = require("../config/tokens");
 
 function validateAuth(req, res, next) {
-  const token = req.cookies.token;
+  //const token = req.cookies.token;
+  const token = req.header('Authorization').substring('Bearer '.length);
   if (!token) {
     console.log("there's no token");
     return res.sendStatus(401);
