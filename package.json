@@ -1,8 +1,13 @@
 {
+  "author": "Luis Robledo",
   "name": "tmdb-back",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines":{
+    "node":"19.2.0",
+    "npm":"9.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,7 +16,6 @@
     "type": "git",
     "url": "git+https://github.com/luis206r/tmdb-back.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luis206r/tmdb-back/issues"
