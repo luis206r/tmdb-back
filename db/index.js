@@ -7,11 +7,11 @@ const config = require("../config/envs");
 //   //logging: true,
 // });
 
-const db = new Sequelize("postgres://tmdb_users_user:UPxvAqzJC7IBc43AD9QSe8AZ5flEVPzs@dpg-cn5tc57sc6pc73c78ss0-a.oregon-postgres.render.com/tmdb_users",
+const db = new Sequelize("tmdb_users",
 "tmdb_users_user",
 "UPxvAqzJC7IBc43AD9QSe8AZ5flEVPzs",
 {
-  //host:"dpg-cn5tc57sc6pc73c78ss0-a",
+  host:"dpg-cn5tc57sc6pc73c78ss0-a",
   dialect:"postgres",
 });
 
