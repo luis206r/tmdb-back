@@ -23,8 +23,8 @@ app.use("/api", routes);
 
 db.sync().then(() => {
   //{ force: false }
-  app.listen(envs.PORT, () => {
-    console.log("Escuchando en el puerto ", envs.PORT);
+  app.listen(10000, () => {
+    console.log("Escuchando en el puerto 10000");
   });
 });
 
