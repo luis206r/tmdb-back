@@ -5,12 +5,12 @@
   "description": "",
   "main": "server.js",
   "engines":{
-    "node":"19.2.0",
-    "npm":"9.2.0"
+    "node":"16.14.2",
+    "npm":"8.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
