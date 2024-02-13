@@ -8,7 +8,7 @@ const cors = require("cors");
 const envs = require("./config/envs");
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
-app.use(cors()); // para comunicar entre puertos
+app.use(cors({origin:envs.CORS_ORIGIN, credentials:true})); // para comunicar entre puertos
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

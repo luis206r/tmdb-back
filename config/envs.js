@@ -8,4 +8,5 @@ module.exports = {
   SECRET: process.env.SECRET,
   TMDB_API_KEY: process.env.API_KEY,
   TMDB_API_TOKEN: process.env.API_TOKEN,
+  CORS_ORIGIN: process.env.CORS_ORIGIN
 };
